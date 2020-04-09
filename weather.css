@@ -39,37 +39,37 @@ body{
 }
     .hourly {
         background-color: white; 
-        margin-top: 80px;
+        margin-top: 20px;
     }
 .hour_1 {
     background-color: #C8C8C8;
     margin: auto;
-    height: 30px;   
+    height: 40px;   
 }
 .hour_2 {
     background-color: #C8C8C8;
     margin: auto;  
-    height: 30px;
+    height: 40px;
 }
 .hour_3 {
     background-color: #C8C8C8;
     margin: auto; 
-    height: 30px; 
+    height: 40px; 
 }
 .hour_4 {
     background-color: #C8C8C8;
     margin: auto; 
-    height: 30px; 
+    height: 40px; 
 }
 .hour_5 {
     background-color: #C8C8C8;
     margin: auto;  
-    height: 30px;
+    height: 40px;
 }
 .hour_6 {
     background-color: #C8C8C8;
     margin: auto;  
-    height: 30px;
+    height: 40px;
 }
 .daily {
         background-color: white;
@@ -130,3 +130,199 @@ body{
     color: #C8C8C8;
     margin-left: 30vw;
 }
+
+
+
+
+/* Phone Styles */
+@media screen and (max-width: 767px) {
+    body {
+      background-color: white;
+    }
+    .column1 {
+        display:block;
+    }
+    .current {
+        border: 5px solid;
+        color: black;
+        width: 80vw;
+        height: 400px;
+        margin: 10px;
+        margin-top: -50px;
+    }
+    .hourly {
+        background-color: white;
+        width: 90vw;
+        margin: auto;
+        padding: 0px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+        grid-template-rows: 200px;
+        grid-gap: 0px;
+    }
+    .hour_1 {
+        background-color: black;
+        margin: auto;
+        height: 80px; 
+        color: #00FFDC;   
+    }
+    .hour_2 {
+        background-color: black;
+        margin: auto;  
+        height: 80px;
+        color: #00FFDC; 
+    }
+    .hour_3 {
+        background-color: black;
+        margin: auto; 
+        height: 80px; 
+        color: #00FFDC; 
+    }
+    .hour_4 {
+        background-color: black;
+        margin: auto; 
+        height: 80px; 
+        color: #00FFDC; 
+    }
+    .hour_5 {
+        background-color:black;
+        margin: auto;  
+        height: 80px;
+        color: #00FFDC; 
+    }
+    .hour_6 {
+        background-color: black;
+        margin: auto;  
+        height: 80px;
+        color: #00FFDC; 
+    }
+    .daily {
+        background-color: white;
+        width: 90vw;
+        margin: auto;
+        padding: 0px;
+        margin-top: 0px;
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 75px 75px 75px 75px 75px 75px;
+        grid-gap: 10px;
+    }
+    .windspeed {
+        font-size: 3em;
+        color: black;
+        margin-left: 1vw; 
+    }
+
+    
+
+
+ /* quesiton 1: in my ipad design, the time/place is moved from the bottom of the page to top. 
+ for consistency/ease, should I keep it that way or can i move it up/ how do i do that */
+    
+  }
+  
+  /* Tablet Styles */
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    body {
+      background-color:white;
+    }
+    .zip {
+        font-size: 4em;
+        color: #E8FF00;
+    }
+    .silverlinings {
+        transform-origin: bottom right;
+        transform: rotate(270deg);
+        position: absolute;
+        width: 500px;
+        top: -200px; 
+        right: 880px;
+        font-size: 2em;
+  }
+    .current {
+        border: none;
+        color: black;
+        width: 40vw;
+        height: 400px;
+        margin: 50px;
+        margin-top: -50px;
+    }
+    .hourly {
+        background-color: white; 
+        margin-top: -50px;
+    }
+    .hour_1 {
+        background-color: #C8C8C8;
+        margin: auto;
+        height: 60px;
+        width: 200px;  
+        margin-top: -10px; 
+        margin-right: 15px;
+    }
+    .hour_2 {
+        background-color: #C8C8C8;
+        margin: auto;  
+        height: 60px;
+        width: 200px;
+        margin-top: -10px; 
+        margin-right: 15px;
+    }
+    .hour_3 {
+        background-color: #C8C8C8;
+        margin: auto; 
+        height: 60px; 
+        width: 200px;
+        margin-top: -10px; 
+        margin-right: 15px;
+    }
+    .hour_4 {
+        background-color: #C8C8C8;
+        margin: auto; 
+        height: 60px; 
+        width: 200px;
+        margin-top: -10px; 
+        margin-right: 15px;
+    }
+    .hour_5 {
+        background-color: #C8C8C8;
+        margin: auto;  
+        height: 60px;
+        width: 200px;
+        margin-top: -10px; 
+        margin-right: 15px;
+    }
+    .hour_6 {
+        background-color: #C8C8C8;
+        margin: auto;  
+        height: 60px;
+        width: 200px;
+        margin-top: -10px; 
+        margin-right: 15px;
+    }
+    .daily {
+        background-color: white;
+        width: 70vw;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 220px 220px;
+    }
+
+
+     /* quesiton 1: in my ipad design, the time/place is moved from the bottom of the page to top. 
+     for consistency/ease, should I keep it that way or can i move it up/ how do i do that */
+    .footer {
+        background-color: white;
+        width: 90vw;
+        margin: auto;
+        padding: 20px;
+        margin-top: 90px;
+        display: block;
+    }
+    .time{
+        color: #E8FF00;
+        margin-right: 30vw; 
+    }
+    .place {
+        color: #C8C8C8;
+        margin-left: 30vw;
+    }
