@@ -7,6 +7,7 @@ img {
     max-width: 100%;
     max-height: 100%;
     display:block;
+    margin: auto;
 }
 .head {
     margin-top: -60px;
@@ -63,40 +64,21 @@ img {
     text-indent: 150px;
     margin-top: -50px;
 }
-    .hourly {
-        background-color: white; 
+    .hour {
+        background-color: grey; 
         margin-top: 20px;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        padding: 10px; 
     }
-.hour_1 {
-    background-color: #C8C8C8;
-    margin: auto;
-    height: 40px;   
-}
-.hour_2 {
-    background-color: #C8C8C8;
-    margin: auto;  
-    height: 40px;
-}
-.hour_3 {
-    background-color: #C8C8C8;
-    margin: auto; 
-    height: 40px; 
-}
-.hour_4 {
-    background-color: #C8C8C8;
-    margin: auto; 
-    height: 40px; 
-}
-.hour_5 {
-    background-color: #C8C8C8;
-    margin: auto;  
-    height: 40px;
-}
-.hour_6 {
-    background-color: #C8C8C8;
-    margin: auto;  
-    height: 40px;
-}
+    .hour_hour p {
+        text-align: left;
+        color: white; 
+    }
+    .hour_temp p {
+        text-align: right;
+        color: black;
+    }
 .daily {
     background-color: white;
     width: 90vw;
@@ -107,7 +89,7 @@ img {
     grid-template-rows: 1fr;
     grid-gap: 10px;
 }
-.monday {
+.day {
     border: 5px solid;
     border-color: black;
     display: grid;
@@ -116,68 +98,12 @@ img {
     "temp day"
     "image image"
     "humid air";
-    grid-template-columns: 100px 100px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 100px 1fr;
+    padding: 20px;
 }
-.tuesday {
-    border: 5px solid;
-    border-color: black;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-    "temp day"
-    "image image"
-    "humid air";
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 1fr 100px 1fr;
-}
-.wednesday {
-    border: 5px solid;
-    border-color: black;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-    "temp day"
-    "image image"
-    "humid air";
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 1fr 100px 1fr;
-}
-.thursday {
-    border: 5px solid;
-    border-color: black;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-    "temp day"
-    "image image"
-    "humid air";
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 1fr 100px 1fr;
-}
-.friday {
-    border: 5px solid;
-    border-color: black;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-    "temp day"
-    "image image"
-    "humid air";
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 1fr 100px 1fr;
-}
-.saturday {
-    border: 5px solid;
-    border-color: black;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-    "temp day"
-    "image image"
-    "humid air";
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 1fr 100px 1fr;
+.day p{
+    font-size: 0.8em;
 }
 .high_low {
     grid-area: temp;
@@ -201,109 +127,23 @@ img {
     margin: auto;
     padding: 20px;
     margin-top: 10px;
-    display: grid;
-    grid-template-columns: 3fr 3fr;
-    grid-template-rows: 200px;
-    grid-gap: 10px;
+    display: block;
 }
-    .windspeed {
+.cloud {
+    position: fixed; 
+    bottom: 0;
+    right: 0; 
+    background-image: url("/img/orange\ overlay.png");
+    width:70vw;
+    height:100vh;
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+.windspeed {
     font-size: 4em;
     color: black;
     margin-left: 5vw; 
 }
-
-
-
-
-/* Phone Styles: current should have a grid 2x2/// move it up to be underneath current */
-
-
-@media screen and (max-width: 767px) {
-    body {
-      background-color: white;
-    }
-    .column1 {
-        display:block;
-    }
-    .current {
-        border: 5px solid;
-        color: black;
-        width: 80vw;
-        height: 400px;
-        margin: 10px;
-        margin-top: -50px;
-    }
-    .hourly {
-        background-color: white;
-        width: 90vw;
-        margin: auto;
-        padding: 0px;
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
-        grid-template-rows: 200px;
-        grid-gap: 0px;
-    }
-    .hour_1 {
-        background-color: black;
-        margin: auto;
-        height: 80px; 
-        color: #00FFDC;   
-    }
-    .hour_2 {
-        background-color: black;
-        margin: auto;  
-        height: 80px;
-        color: #00FFDC; 
-    }
-    .hour_3 {
-        background-color: black;
-        margin: auto; 
-        height: 80px; 
-        color: #00FFDC; 
-    }
-    .hour_4 {
-        background-color: black;
-        margin: auto; 
-        height: 80px; 
-        color: #00FFDC; 
-    }
-    .hour_5 {
-        background-color:black;
-        margin: auto;  
-        height: 80px;
-        color: #00FFDC; 
-    }
-    .hour_6 {
-        background-color: black;
-        margin: auto;  
-        height: 80px;
-        color: #00FFDC; 
-    }
-    .daily {
-        background-color: white;
-        width: 90vw;
-        margin: auto;
-        padding: 0px;
-        margin-top: 0px;
-        display: grid;
-        grid-template-columns: 2fr;
-        grid-template-rows: 75px 75px 75px 75px 75px 75px;
-        grid-gap: 10px;
-    }
-    .windspeed {
-        font-size: 3em;
-        color: black;
-        margin-left: 1vw; 
-    }
-
-    
-
-
- /* quesiton 1: in my ipad design, the time/place is moved from the bottom of the page to top. 
- for consistency/ease, should I keep it that way or can i move it up/ how do i do that */
-    
-  }
   
   /* Tablet Styles */
   @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -314,100 +154,171 @@ img {
         font-size: 4em;
         color: #E8FF00;
     }
+    .time{
+        color: black;
+        margin-left: 10vw;
+        margin-top: -50px;
+    }
+    .place {
+        color: #C8C8C8;
+        margin-left: 10vw;
+        margin-top: -80px;
+    }
     .silverlinings {
         transform-origin: bottom right;
         transform: rotate(270deg);
         position: absolute;
         width: 500px;
         top: -200px; 
-        right: 880px;
+        left: -500px; 
         font-size: 2em;
-  }
-    .current {
+    }
+    .column1 {
         border: none;
-        color: black;
-        width: 40vw;
-        height: 400px;
-        margin: 50px;
-        margin-top: -50px;
+        width: 60vw;
+        height: 80vh;
+        margin: 0px;
+        padding: 10px; 
     }
-    .hourly {
-        background-color: white; 
-        margin-top: -50px;
+    .icon {
+        margin-top: -70px;
     }
-    .hour_1 {
-        background-color: #C8C8C8;
-        margin: auto;
-        height: 60px;
-        width: 200px;  
-        margin-top: -10px; 
-        margin-right: 15px;
-    }
-    .hour_2 {
-        background-color: #C8C8C8;
-        margin: auto;  
-        height: 60px;
-        width: 200px;
-        margin-top: -10px; 
-        margin-right: 15px;
-    }
-    .hour_3 {
-        background-color: #C8C8C8;
-        margin: auto; 
-        height: 60px; 
-        width: 200px;
-        margin-top: -10px; 
-        margin-right: 15px;
-    }
-    .hour_4 {
-        background-color: #C8C8C8;
-        margin: auto; 
-        height: 60px; 
-        width: 200px;
-        margin-top: -10px; 
-        margin-right: 15px;
-    }
-    .hour_5 {
-        background-color: #C8C8C8;
-        margin: auto;  
-        height: 60px;
-        width: 200px;
-        margin-top: -10px; 
-        margin-right: 15px;
-    }
-    .hour_6 {
-        background-color: #C8C8C8;
-        margin: auto;  
-        height: 60px;
-        width: 200px;
-        margin-top: -10px; 
-        margin-right: 15px;
+    .temp {
+        color: #C8C8C8; 
+        margin-left: 100px;
     }
     .daily {
         background-color: white;
         width: 70vw;
-        grid-template-columns: 2fr 2fr 2fr;
-        grid-template-rows: 220px 220px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
-
-
-     /* quesiton 2: in my ipad design, the time/place is moved from the bottom of the page to top. 
-     for consistency/ease, should I keep it that way or can i move it up/ how do i do that */
     .footer {
         background-color: white;
         width: 90vw;
         margin: auto;
-        padding: 20px;
-        margin-top: 90px;
+        padding: 0px;
+        margin-top: 0px;
         display: block;
     }
+    .cloud {
+        position: fixed; 
+        bottom: 0;
+        left: 0; 
+        background-image: url("/img/yellow\ overlay.png");
+        width:120vw;
+        height:120vh;
+        background-repeat: no-repeat; 
+        background-size: contain;
+    }
+}
+
+    /* Phone Styles */
+    @media screen and (max-width: 767px) {
+    body {
+        background-color: white;
+    }
+    .zip {
+        font-size: 3em;
+        color: #00FFDC; 
+        margin-left: 12vw;
+        margin-top: 80px;
+    }
     .time{
-        color: #E8FF00;
-        margin-right: 30vw; 
+        margin-left: 12vw;
+        color: black;
     }
     .place {
-        color: #C8C8C8;
-        margin-left: 30vw;
+        color: black;
+        margin-left: 12vw;
     }
-/* question 3: for all the interchangeable info that uses javacript I am assuming, is all this filler text enough? ---- like for example
-on the current box there's four pieces of info: humidity, temp, etc.*/
+    .silverlinings {
+        font-size: 2em;
+        margin-left: 85px;
+    padding: 0px;
+    margin-top: 20px; 
+    }
+      .columns {
+          background-color: white;
+          width: 70vw;
+          margin: auto;
+          padding: 20px;
+          margin-top: 0px;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr auto;
+          grid-gap: 10px;
+      }
+          .column1 {
+          border: none;
+          width: 70vw;
+          margin: 0px;
+          padding: 0px; 
+      }    
+      .hourly {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+      }
+    .hour {
+        display: grid;
+        background-color: black; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+  }
+  .hour_temp p {
+    text-align: center;
+    color: #00FFDC;
+}
+  .current_bottom {
+    display: grid;
+    background-color:  #C8C8C8;
+    margin-top: -50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+    text-indent: 0px;  
+    margin-top: 10px;
+}
+  .daily {
+    background-color: white;
+    width: 70vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.day {
+    border: none;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "day image temp";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 20px;
+}
+.high_low {
+    grid-area: temp;
+}
+.dayofweek {
+    grid-area: day;
+}
+.iconforecast {
+    grid-area: image; 
+}
+  .humidityforecast {
+    display: none; 
+}
+.airforecast {
+    display: none; 
+}
+  .cloud {
+    position: fixed; 
+    bottom: 0;
+    right: 0; 
+    background-image: url("/img/teal\ overlay.png");
+    width:90vw;
+    height:70vh;
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+    }
