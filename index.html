@@ -46,28 +46,28 @@
                     <p class="temp">{{current.temp.current}}</p>
                 </div>
                 <div class="icon">
-                    <img src="/img/02d (2).png" alt="">
+                    <img src="/img/02d.png" alt="">
                 </div>
             </div>
             <div class="current_bottom">
                 <div class="humidity">   
                         <p>
-                            humidity
+                            humidity: {{current.humidity}}
                         </p>
                 </div>
                 <div class="air_quality">
                         <p>
-                            air quality
+                            air quality: {{current.air_quality}}
                         </p>
                 </div>
                 <div class="uv_index">
                         <p>
-                            uv index 
+                            UV index: {{current.uv}}
                         </p>
                 </div>
-                <div class="preciptation">
+                <div class="description">
                         <p>
-                            precipitation
+                            description: {{current.description_main}}
                         </p>
                 </div>
             </div>
@@ -76,72 +76,72 @@
             <div class="hour">
                 <div class="hour_hour">
                     <p>
-                        time
+                        {{hourly[1].time}}
                     </p>
                 </div>
                 <div class="hour_temp">
                     <p>
-                        temp
+                        {{hourly[1].temperature}}
                     </p>
                 </div>
             </div>
             <div class="hour">
                 <div class="hour_hour">
                     <p>
-                        time
+                        {{hourly[2].time}}
                     </p>
                 </div>
                 <div class="hour_temp">
                     <p>
-                        temp
+                        {{hourly[2].temperature}}
                     </p>
                 </div>
             </div>
             <div class="hour">
                 <div class="hour_hour">
                     <p>
-                        time
+                        {{hourly[3].time}}
                     </p>
                 </div>
                 <div class="hour_temp">
                     <p>
-                        temp
+                        {{hourly[3].temperature}}
                     </p>
                 </div>
             </div>
             <div class="hour">
                 <div class="hour_hour">
                     <p>
-                        time
+                        {{hourly[4].time}}
                     </p>
                 </div>
                 <div class="hour_temp">
                     <p>
-                        temp
+                        {{hourly[4].temperature}}
                     </p>
                 </div>
             </div>
             <div class="hour">
                 <div class="hour_hour">
                     <p>
-                        time
+                        {{hourly[5].time}}
                     </p>
                 </div>
                 <div class="hour_temp">
                     <p>
-                        temp
+                        {{hourly[5].temperature}}
                     </p>
                 </div>
             </div>
             <div class="hour">
                 <div class="hour_hour">
                     <p>
-                        time
+                        {{hourly[6].time}}
                     </p>
                 </div>
                 <div class="hour_temp">
                     <p>
-                        temp
+                        {{hourly[6].temperature}}
                     </p>
                 </div>
             </div>
@@ -151,150 +151,150 @@
         <div class="monday day">
                 <div class="high_low">   
                         <p>
-                            high/low
+                            {{forecast[1].max_temp}} {{forecast[1].min_temp}}
                         </p>
                 </div>
                 <div class="dayofweek">
                         <p>
-                            mon
+                            {{forecast[1].weekday}}
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d (2).png" alt="">
+                    <img src="/img/02d.png" alt="">
                 </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity 
+                            humidity: {{forecast[1].humidity}}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality
+                            air quality: {{current.air_quality}}
                         </p>
                 </div>  
         </div>
         <div class="tuesday day">
                 <div class="high_low">   
                         <p>
-                            high/low
+                            {{forecast[2].max_temp}} {{forecast[2].min_temp}}
                         </p>
                 </div>
                 <div class="dayofweek">
                         <p>
-                            mon
+                            {{forecast[2].weekday}}
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d (2).png" alt="">
+                    <img src="/img/02d.png" alt="">
                 </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity 
+                            humidity: {{current.humidity}} 
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality
+                            air quality: {{current.air_quality}}
                         </p>
                 </div> 
         </div>
         <div class="wednesday day">
                 <div class="high_low">   
                         <p>
-                            high/low
+                            {{forecast[3].max_temp}} {{forecast[3].min_temp}}
                         </p>
                 </div>
                 <div class="dayofweek">
                         <p>
-                            mon
+                            {{forecast[3].weekday}}
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d (2).png" alt="">
+                    <img src="/img/02d.png" alt="">
                 </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity 
+                            humidity: {{current.humidity}}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality
+                            air quality: {{current.air_quality}}
                         </p>
                 </div>
         </div>
         <div class="thursday day">
                 <div class="high_low">   
                         <p>
-                            high/low
+                            {{forecast[4].max_temp}} {{forecast[4].min_temp}}
                         </p>
                 </div>
                 <div class="dayofweek">
                         <p>
-                            mon
+                            {{forecast[4].weekday}}
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d (2).png" alt="">
+                    <img src="/img/02d.png" alt="">
                 </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity 
+                            humidity: {{current.humidity}}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality
+                            air quality: {{current.air_quality}}
                         </p>
                 </div>
             </div>  
         <div class="friday day">
                 <div class="high_low">   
                         <p>
-                            high/low
+                            {{forecast[5].max_temp}} {{forecast[5].min_temp}}
                         </p>
                 </div>
                 <div class="dayofweek">
                         <p>
-                            mon
+                            {{forecast[5].weekday}}
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d (2).png" alt="">
+                    <img src="/img/02d.png" alt="">
                 </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity 
+                            humidity: {{current.humidity}} 
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality
+                            air quality: {{current.air_quality}}
                         </p>
                 </div>
             </div>  
             <div class="saturday day">
                 <div class="high_low">   
                         <p>
-                            high/low
+                            {{forecast[6].max_temp}} {{forecast[6].min_temp}}
                         </p>
                 </div>
                 <div class="dayofweek">
                         <p>
-                            mon
+                            {{forecast[6].weekday}}
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d (2).png" alt="">
+                    <img src="/img/02d.png" alt="">
                 </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity 
+                            humidity: {{current.humidity}}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality
+                            air quality: {{current.air_quality}}
                         </p>
                 </div>
             </div> 

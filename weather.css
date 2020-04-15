@@ -10,7 +10,8 @@ img {
     margin: auto;
 }
 .head {
-    margin-top: -60px;
+    z-index: 10;
+    position: relative;
 }
 .zip {
     font-size: 4em;
@@ -130,7 +131,8 @@ img {
     display: block;
 }
 .cloud {
-    position: fixed; 
+    position: fixed;
+    z-index: 1; 
     bottom: 0;
     right: 0; 
     background-image: url("/img/orange\ overlay.png");
