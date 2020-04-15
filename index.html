@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="keys.js"></script>
+
+        <script src="https://unpkg.com/@warnick/forecast-js/js/forecast.min.js" defer></script>
+        <link rel="stylesheet" href="https://unpkg.com/@warnick/forecast-js/css/forecast.css">
     <link rel="stylesheet" href="weather.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="results" id="app">
     <div class="head">
-        <div class="zip">
-            <p>
-                _zip
-            </p>
+        <div class="zip" id="app">
+            <input
+        placeholder="Enter Your ZIP Code"
+        v-on:input="zip_trigger"
+        name="name"
+        id="zip"
+      />
         </div>
         <div class= "time_place">
             <div class="time">
-                <p>time</p>
+                <p class="time">
+                    {{time.hour_12}}:{{time.minute}}:{{time.seconds}} {{time.ampm}}
+                  </p>
             </div>
             <div class="place">
-                <p> place</p>
+                <p class="place">{{city}}</p>
             </div>
         </div>
         <div class="silverlinings">
@@ -33,7 +43,7 @@
         <div class="column1">
             <div class="current_top">
                 <div class="temp">
-                     47
+                    <p class="temp">{{current.temp.current}}</p>
                 </div>
                 <div class="icon">
                     <img src="/img/02d (2).png" alt="">
@@ -297,5 +307,6 @@
     </div>
 </div>
 <div class= "cloud"></div>
+</div>
 </body>
 </html>
