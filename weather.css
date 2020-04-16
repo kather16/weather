@@ -13,25 +13,43 @@ img {
     z-index: 10;
     position: relative;
 }
+input {
+    display: block;
+    color: #FA8315;
+    height: 50px;
+    width: 20vw;
+    border: white solid 5px;
+    padding: 5px;
+    font-size: 40px;
+    background: rgba(255,255,255,0.3);
+  }
+  input.underline {
+    border: none;
+    border-bottom: 10px solid black;
+    padding: 20px;
+  }
 .zip {
     font-size: 4em;
     color: #FA8315;
-    margin-left: 80vw;
+    margin-left: 70vw;
+    margin-top: 2vw; 
 }
 .time{
     color: #FA8315;
-    margin-left: 90vw;
+    margin-left: 5vw;
+    margin-top: -30px; 
 }
 .place {
     color: #C8C8C8;
-    margin-left: 90vw;
+    margin-left: 5vw;
+    margin-top: -70px; 
 }
 .silverlinings {
     font-size: 4em;
     color: black;
     margin-left: 85px;
     padding: 0px;
-    margin-top: -60px; 
+    margin-top: -40px; 
 }
 .columns {
     background-color: white;
@@ -52,21 +70,23 @@ img {
     padding: 50px; 
 }
 .temp {
-    font-size: 1em;
+    font-size: 2em;
     color: #C8C8C8; 
+    margin-left: 30px;
+    margin-top: -20px;
 }
 .icon {
     width: 100%;  
-    margin-top: -120px;
+    margin-top: -100px;
 }
 .current_bottom {
     display:block;
     text-align: left; 
-    text-indent: 150px;
-    margin-top: -50px;
+    text-indent: 30px;
+    margin-top: -100px;
 }
     .hour {
-        background-color: grey; 
+        background-color: #C8C8C8; 
         margin-top: 20px;
         display: grid; 
         grid-template-columns: 1fr 1fr; 
@@ -111,6 +131,7 @@ img {
 }
 .dayofweek {
     grid-area: day;
+    color: #FA8315;
 }
 .iconforecast {
     grid-area: image; 
@@ -156,6 +177,9 @@ img {
         font-size: 4em;
         color: #E8FF00;
     }
+    input {
+        color: #E8FF00;
+      }
     .time{
         color: black;
         margin-left: 10vw;
@@ -164,7 +188,7 @@ img {
     .place {
         color: #C8C8C8;
         margin-left: 10vw;
-        margin-top: -80px;
+        margin-top: 10px;
     }
     .silverlinings {
         transform-origin: bottom right;
@@ -183,17 +207,19 @@ img {
         padding: 10px; 
     }
     .icon {
-        margin-top: -70px;
+        margin-top: -130px;
     }
     .temp {
         color: #C8C8C8; 
-        margin-left: 100px;
     }
     .daily {
         background-color: white;
         width: 70vw;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+    .dayofweek {
+        color: #E8FF00;
     }
     .footer {
         background-color: white;
@@ -223,16 +249,17 @@ img {
     .zip {
         font-size: 3em;
         color: #00FFDC; 
-        margin-left: 12vw;
-        margin-top: 80px;
+        margin-left: 10vw;
     }
+    input {
+        color: #00FFDC;
+      }
     .time{
-        margin-left: 12vw;
         color: black;
+        margin-top: 60px;
     }
     .place {
         color: black;
-        margin-left: 12vw;
     }
     .silverlinings {
         font-size: 2em;
@@ -253,7 +280,7 @@ img {
       }
           .column1 {
           border: none;
-          width: 70vw;
+          width: auto;
           margin: 0px;
           padding: 0px; 
       }    
@@ -303,6 +330,7 @@ img {
 }
 .dayofweek {
     grid-area: day;
+    color:#00FFDC; 
 }
 .iconforecast {
     grid-area: image; 
@@ -318,9 +346,50 @@ img {
     bottom: 0;
     right: 0; 
     background-image: url("/img/teal\ overlay.png");
-    width:90vw;
     height:70vh;
     background-repeat: no-repeat; 
     background-size: contain;
 }
     }
+    .icon_01d {
+        background-image: url("/img/01d.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .icon_02d {
+        background-image: url("/img/02d.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    .icon_03d {
+        background-image: url("/img/03d.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .icon_04d {
+        background-image: url("/img/04d.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .icon_10d {
+        background-image: url("/img/10d.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .icon_11d {
+        background-image: url("/img/11d.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .icon_13d {
+        background-image: url("/img/13d.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }

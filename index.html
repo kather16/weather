@@ -15,13 +15,14 @@
 <body>
     <div class="results" id="app">
     <div class="head">
-        <div class="zip" id="app">
+        <div class="zip">
             <input
-        placeholder="Enter Your ZIP Code"
+            class="underline"
+            placeholder="ZIP"
         v-on:input="zip_trigger"
         name="name"
         id="zip"
-      />
+      /> 
         </div>
         <div class= "time_place">
             <div class="time">
@@ -43,16 +44,25 @@
         <div class="column1">
             <div class="current_top">
                 <div class="temp">
-                    <p class="temp">{{current.temp.current}}</p>
+                    <p class="temp">{{current.temp.current}}° </p>
+                    
                 </div>
                 <div class="icon">
-                    <img src="/img/02d.png" alt="">
-                </div>
+
+                    <img
+                    
+                    v-bind:src="'/img/' + forecast[1].description_icon + '.png'"
+                    
+                    v-bind:alt="forecast[1].weather.description"
+                    
+                    />
+                    
+                    </div>
             </div>
             <div class="current_bottom">
                 <div class="humidity">   
                         <p>
-                            humidity: {{current.humidity}}
+                            humidity: {{current.humidity}} %
                         </p>
                 </div>
                 <div class="air_quality">
@@ -81,7 +91,7 @@
                 </div>
                 <div class="hour_temp">
                     <p>
-                        {{hourly[1].temperature}}
+                        {{hourly[1].temperature}}°
                     </p>
                 </div>
             </div>
@@ -93,7 +103,7 @@
                 </div>
                 <div class="hour_temp">
                     <p>
-                        {{hourly[2].temperature}}
+                        {{hourly[2].temperature}}°
                     </p>
                 </div>
             </div>
@@ -105,7 +115,7 @@
                 </div>
                 <div class="hour_temp">
                     <p>
-                        {{hourly[3].temperature}}
+                        {{hourly[3].temperature}}°
                     </p>
                 </div>
             </div>
@@ -117,7 +127,7 @@
                 </div>
                 <div class="hour_temp">
                     <p>
-                        {{hourly[4].temperature}}
+                        {{hourly[4].temperature}}°
                     </p>
                 </div>
             </div>
@@ -129,7 +139,7 @@
                 </div>
                 <div class="hour_temp">
                     <p>
-                        {{hourly[5].temperature}}
+                        {{hourly[5].temperature}}°
                     </p>
                 </div>
             </div>
@@ -141,7 +151,7 @@
                 </div>
                 <div class="hour_temp">
                     <p>
-                        {{hourly[6].temperature}}
+                        {{hourly[6].temperature}}°
                     </p>
                 </div>
             </div>
@@ -151,7 +161,7 @@
         <div class="monday day">
                 <div class="high_low">   
                         <p>
-                            {{forecast[1].max_temp}} {{forecast[1].min_temp}}
+                            {{forecast[1].max_temp}}° {{forecast[1].min_temp}}°
                         </p>
                 </div>
                 <div class="dayofweek">
@@ -160,23 +170,31 @@
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d.png" alt="">
-                </div>
+
+                        <img
+                        
+                        v-bind:src="'/img/' + forecast[1].description_icon + '.png'"
+                        
+                        v-bind:alt="forecast[1].weather.description"
+                        
+                        />
+                        
+                        </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity: {{forecast[1].humidity}}
+                            {{ forecast[1].weather.description }}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality: {{current.air_quality}}
+                            {{forecast[1].moon}}
                         </p>
                 </div>  
         </div>
         <div class="tuesday day">
                 <div class="high_low">   
                         <p>
-                            {{forecast[2].max_temp}} {{forecast[2].min_temp}}
+                            {{forecast[2].max_temp}}° {{forecast[2].min_temp}}°
                         </p>
                 </div>
                 <div class="dayofweek">
@@ -185,23 +203,31 @@
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d.png" alt="">
-                </div>
+
+                        <img
+                        
+                        v-bind:src="'/img/' + forecast[2].description_icon + '.png'"
+                        
+                        v-bind:alt="forecast[2].weather.description"
+                        
+                        />
+                        
+                        </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity: {{current.humidity}} 
+                            {{ forecast[2].weather.description }} 
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality: {{current.air_quality}}
+                            {{forecast[2].moon}}
                         </p>
                 </div> 
         </div>
         <div class="wednesday day">
                 <div class="high_low">   
                         <p>
-                            {{forecast[3].max_temp}} {{forecast[3].min_temp}}
+                            {{forecast[3].max_temp}}° {{forecast[3].min_temp}}°
                         </p>
                 </div>
                 <div class="dayofweek">
@@ -210,23 +236,30 @@
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d.png" alt="">
-                </div>
+                    <img
+
+                    v-bind:src="'/img/' + forecast[3].description_icon + '.png'"
+                    
+                    v-bind:alt="forecast[3].weather.description"
+                    
+                    />
+                    
+                    </div>
                 <div class="humidityforecast">
                         <p>
-                            humidity: {{current.humidity}}
+                            {{ forecast[3].weather.description }}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality: {{current.air_quality}}
+                            {{forecast[3].moon}}
                         </p>
                 </div>
         </div>
         <div class="thursday day">
                 <div class="high_low">   
                         <p>
-                            {{forecast[4].max_temp}} {{forecast[4].min_temp}}
+                            {{forecast[4].max_temp}}° {{forecast[4].min_temp}}°
                         </p>
                 </div>
                 <div class="dayofweek">
@@ -235,23 +268,30 @@
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d.png" alt="">
-                </div>
+                    <img
+
+v-bind:src="'/img/' + forecast[4].description_icon + '.png'"
+
+v-bind:alt="forecast[4].weather.description"
+
+/>
+
+</div>
                 <div class="humidityforecast">
                         <p>
-                            humidity: {{current.humidity}}
+                            {{ forecast[4].weather.description }}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality: {{current.air_quality}}
+                            {{forecast[4].moon}}
                         </p>
                 </div>
             </div>  
         <div class="friday day">
                 <div class="high_low">   
                         <p>
-                            {{forecast[5].max_temp}} {{forecast[5].min_temp}}
+                            {{forecast[5].max_temp}}° {{forecast[5].min_temp}}°
                         </p>
                 </div>
                 <div class="dayofweek">
@@ -260,23 +300,30 @@
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d.png" alt="">
-                </div>
+                    <img
+
+v-bind:src="'/img/' + forecast[5].description_icon + '.png'"
+
+v-bind:alt="forecast[5].weather.description"
+
+/>
+
+</div>
                 <div class="humidityforecast">
                         <p>
-                            humidity: {{current.humidity}} 
+                            {{ forecast[5].weather.description }}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality: {{current.air_quality}}
+                            {{forecast[5].moon}}
                         </p>
                 </div>
             </div>  
             <div class="saturday day">
                 <div class="high_low">   
                         <p>
-                            {{forecast[6].max_temp}} {{forecast[6].min_temp}}
+                            {{forecast[6].max_temp}}° {{forecast[6].min_temp}}°
                         </p>
                 </div>
                 <div class="dayofweek">
@@ -285,16 +332,23 @@
                         </p>
                 </div>
                 <div class="iconforecast">
-                    <img src="/img/02d.png" alt="">
-                </div>
+                    <img
+
+v-bind:src="'/img/' + forecast[6].description_icon + '.png'"
+
+v-bind:alt="forecast[6].weather.description"
+
+/>
+
+</div>
                 <div class="humidityforecast">
                         <p>
-                            humidity: {{current.humidity}}
+                            {{ forecast[6].weather.description }}
                         </p>
                 </div>
                 <div class="airforecast">
                         <p>
-                            air quality: {{current.air_quality}}
+                            {{forecast[6].moon}}
                         </p>
                 </div>
             </div> 
